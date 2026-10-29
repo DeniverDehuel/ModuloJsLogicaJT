@@ -70,12 +70,17 @@ while (jogando) {
     let escolha = prompt("> ");
     if (escolha === "1") {
       local = "vila";
-    } else if (escolha === "2") {
-      vida = vida + 3;
+    } else if (escolha === "2" && vida > 7) {
+          vida = vida + (10 - vida);
       console.log("A água é gelada. Vida: " + vida);
-    } else if (escolha === "3" && inventario.includes("moeda furada")) {
+    }  if (vida == 10){
+        console.log("Sua Vida está no Máximo!")
+    }
+    else if (escolha === "3" && inventario.includes("moeda furada")) {
       console.log("A moeda cai sem fazer barulho. Uma corda sobe do fundo do poço, sozinha.");
       inventario.push("corda");
+      let posicao_moeda = inventario.findIndex(item => item === "moeda furada")
+      inventario.splice(posicao_moeda,1)
       console.log("Inventário: " + inventario);
     }
   } else if (local === "ponte") {
