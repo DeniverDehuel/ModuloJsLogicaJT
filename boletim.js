@@ -74,14 +74,40 @@
 // }
 //--------------------------------------------------------------------
 
-const medias = [7, 8, 9, 4, 5, 7.6]
-const nomes = ["Ana", "Bruno", "Carla", "Diego", "Elisa", "Fabio"]
+// const medias = [7, 8, 9, 4, 5, 7.6]
+// const nomes = ["Ana", "Bruno", "Carla", "Diego", "Elisa", "Fabio"]
 
-// console.log("Alunos: " + nomes[3] + " Média: " + medias[3])
+// // console.log("Alunos: " + nomes[3] + " Média: " + medias[3])
+// for (let i = 0; i < medias.length; i++) {
+//     if (medias[i] >= 7) {
+//         console.log(nomes[i] + " Aprovado")
+//     } else {
+//         console.log (nomes[i] + " Reprovado")
+//     }
+// }
+
+//------------------------------------------------------------------------------------------------------------
+// Começe com uma const de medias = [] e use o while para pedir medias ate a pessoa digitar -1 (pesquise push)
+// Depois, aprovados e média.
+
+const promtp = require("prompt-sync")
+
+const medias = []
+let input;
+let aprovados = 0
+let soma = 0
+
+while (input != -1){ // enquanto o input for diferente (!=) de -1 vai seguir o loop.
+    input = Number(promtp("Próxima Média: "))
+    medias.push(input) // push adiciona uma informação no final da fila.
+    if(input != -1){
+        medias.push(input)
+    }
+}
 for (let i = 0; i < medias.length; i++) {
     if (medias[i] >= 7) {
         console.log(nomes[i] + " Aprovado")
     } else {
         console.log (nomes[i] + " Reprovado")
     }
-};
+}
