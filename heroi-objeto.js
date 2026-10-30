@@ -1,4 +1,4 @@
-// vamos criar as informações em POO: PROGRAMAÇÃO ORIENTADA A OBJETO
+// vamos criar as informações em OBJETO.
 
 const heroi = {
     nome: "Denkari", // nome do heroi que eu escolhi
@@ -20,6 +20,6 @@ const aranha = {
 
 
 console.log(heroi.vida)
-heroi.vida = 15; // erro de constante sendo mudada (TypeError: Assignment to constant variable)
-heroi = 15;
+heroi.vida = 15; 
+heroi = 15; // erro de constante sendo mudada (TypeError: Assignment to constant variable)
 console.log(heroi.vida)
